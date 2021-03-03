@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in | Sign up Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="square" style="--i: 0; width: 100px; height: 100px; top: 400px; right: 530px; z-index: 2;"></div>
+        <div class="square" style="--i: 1; width: 50px; height: 50px; top: 300px; left: 580px;"></div>
+        <div class="square" style="--i: 2; width: 100px; height: 100px; top: 150px; left: 400px;"></div>
+        <div class="square" style="--i: 3; width: 150px; height: 150px; top: 200px; right: 300px;"></div>
+        <div class="square" style="--i: 4; width: 30px; height: 30px; bottom: 70px; right: 700px;"></div>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Sign in</button>
+                <button type="button" class="toggle-btn" onclick="register()">Sign up</button>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="password" class="input-field" placeholder="Repeat Password" required>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="first-line-footer">
+            This page was made by Max and Danya using HTML5, CSS3 and Flask (Python)
+        </div>
+        <div class="second-line-footer">
+            <ul class="social-media-menu">
+                <li><img src="https://www.pngkey.com/png/full/178-1787366_coming-soon-github-white-icon-png.png" alt="mail" class="social-media-icon"><p><a href="https://github.com/maxcore25">maxcore25</a></p></li>
+                <li><img src="https://doshkolniki.spb.ru/wp-content/uploads/2020/10/vk-ikonka1_2x.png" alt="mail" class="social-media-icon"><p><a href="https://vk.com/maxcore25">maxcore25</a></p></li>
+                <li><img src="https://www.pngkey.com/png/full/178-1787366_coming-soon-github-white-icon-png.png" alt="mail" class="social-media-icon"><p><a href="https://github.com/MartsinovichDanya">MartsinovichDanya</a></p></li>
+                <li><img src="https://doshkolniki.spb.ru/wp-content/uploads/2020/10/vk-ikonka1_2x.png" alt="mail" class="social-media-icon"><p><a href="https://vk.com/d.martsipanich">d.martsipanich</a></p></li>
+            </ul>
+        </div>
+        <p id="confidentiality">2021© PICCHAT. ALL RIGHTS RESERVED</p>
+    </footer>
+    <script>
+        var signInForm = document.getElementById("login");
+        var signUpForm = document.getElementById("register");
+        var btnDiv = document.getElementById("btn");
+        function register(){
+            signInForm.style.left = '-400px';
+            signUpForm.style.left = '50px';
+            btnDiv.style.left = '101px';
+        }
+        function login(){
+            signInForm.style.left = '50px';
+            signUpForm.style.left = '450px';
+            btnDiv.style.left = '0';
+        }
+    </script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".form-box"), {
+            max: 10,
+            speed: 200
+        });
+    </script>
+</body>
+</html>
