@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 section{
     height: 100vh;
@@ -85,7 +85,7 @@ section{
 }
 /*==============Upper Switcher==============*/
 .button-box{
-    width: 211px;
+    width: 220px;
     margin: 35px auto;
     position: relative;
     box-shadow: 0 0 20px 9px rgba(255, 255, 255, .2);
@@ -106,7 +106,7 @@ section{
     position: absolute;
     width: 110px;
     height: 100%;
-    background-image: linear-gradient(to right, #004d7a, #008793, #00bf72, #a8eb12);
+    background: linear-gradient(to right, #004d7a, #008793, #00bf72, #a8eb12);
     border-radius: 30px;
     transition: .5s;
 }
@@ -121,12 +121,12 @@ section{
     align-items: center;
 }
 .input-field, .submit-btn{
-    font-size: 17px;
+    font-size: 16px;
     width: 100%;
-    padding: 8px 10px;
+    padding: 5px 20px;
     margin: 10px 0;
     border: none;
-    border-radius: 10px;
+    border-radius: 35px;
     outline: none;
     background: transparent;
     color: white;
@@ -134,11 +134,30 @@ section{
     height: 50px;
 }
 input::placeholder{color: #ddd;}
-.submit-btn{cursor: pointer; margin-top: 40px; width: 80%; transition: .3s;}
-.submit-btn:hover{background: rgba(255, 255, 255, .1);}
+.submit-btn{
+    cursor: pointer; 
+    margin-top: 30px; 
+    width: 60%; 
+    transition: .3s; 
+    background: linear-gradient(to right, #004d7a, #008793, #00bf72, #a8eb12);
+}
+/* .submit-btn:hover{background: rgba(255, 255, 255, .1);} */
 #login{left: 50px;}
 #register{left: 450px;}
 /* .input-field:nth-child(2){background: red;} */
+.input-wrapper{
+    display: flex; 
+    align-items: center;
+    position: relative;
+}
+.icon{
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: white;
+    position: absolute;
+    left: -13%;
+}
 
 /*==============Footer==============*/
 footer{

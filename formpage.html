@@ -5,8 +5,44 @@
     <title>Sign in | Sign up Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
+    <svg display="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="at" viewBox="0 0 512 512">
+            <g>
+                <path d="M226.735,1.636C111.259,14.518,17.472,106.202,2.285,221.396c-21.518,163.24,111.938,302.116,273.589,289.849
+                    c59.464-4.513,115.124-31.086,158.736-71.759l3.746-3.492c4.309-4.018,4.544-10.768,0.526-15.076l-14.555-15.607
+                    c-4.018-4.309-10.767-4.544-15.076-0.526l-7.803,7.277c-48.51,45.232-115.104,65.582-182.284,54.141
+                    c-95.215-16.216-168.411-97.052-175.846-193.352C33.487,145.508,136.207,39.093,262.324,42.758
+                    c116.288,3.381,207.009,102.616,207.009,218.953v15.622c0,24.934-21.486,44.932-46.921,42.46
+                    C400.246,317.637,384,297.714,384,275.442v-94.108c0-5.892-4.776-10.667-10.667-10.667H352c-4.283,0-7.921,2.56-9.618,6.203
+                    c-21.465-23.413-52.19-38.203-86.382-38.203c-64.698,0-117.333,52.635-117.333,117.333S191.302,373.334,256,373.334
+                    c40.755,0,76.691-20.909,97.732-52.54c15.842,26.475,45.276,43.922,78.78,41.677c45.303-3.035,79.488-42.746,79.488-88.15V256
+                    C512,105.202,380.931-15.566,226.735,1.636z M256,330.667c-41.167,0-74.667-33.5-74.667-74.667
+                    c0-41.167,33.5-74.667,74.667-74.667c41.167,0,74.667,33.5,74.667,74.667C330.667,297.167,297.167,330.667,256,330.667z"/>
+            </g>
+        </symbol>
+        <symbol id="lock" viewBox="-64 0 512 512">
+            <g>
+                <path d="m336 192h-16v-64c0-70.59375-57.40625-128-128-128s-128 57.40625-128 128v64h-16c-26.453125 0-48 21.523438-48 48v224c0 26.476562 21.546875 48 48 48h288c26.453125 0 48-21.523438 48-48v-224c0-26.476562-21.546875-48-48-48zm-229.332031-64c0-47.0625 38.269531-85.332031 85.332031-85.332031s85.332031 38.269531 85.332031 85.332031v64h-170.664062zm0 0"/>
+            </g>
+        </symbol>
+        <symbol id="repeat" viewBox="0 0 322.447 322.447">
+            <g>
+                <path d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+                c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+                c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+                c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+                c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+                l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+            </g>
+        </symbol>
+    </svg>
     <section>
         <div class="color"></div>
         <div class="color"></div>
@@ -22,14 +58,39 @@
                 <button type="button" class="toggle-btn" onclick="register()">Sign up</button>
             </div>
             <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="Email" required>
-                <input type="password" class="input-field" placeholder="Password" required>
+                <div class="input-wrapper">
+                    <svg class="icon">
+                        <use xlink:href="#at"></use>
+                    </svg>
+                    <input type="text" class="input-field" placeholder="Email" required>
+                </div>
+                <div class="input-wrapper">
+                    <svg class="icon">
+                        <use xlink:href="#lock"></use>
+                    </svg>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                </div>
                 <button type="submit" class="submit-btn">Sign In</button>
             </form>
             <form id="register" class="input-group">
-                <input type="text" class="input-field" placeholder="Email" required>
-                <input type="password" class="input-field" placeholder="Password" required>
-                <input type="password" class="input-field" placeholder="Repeat Password" required>
+                <div class="input-wrapper">
+                    <svg class="icon">
+                        <use xlink:href="#at"></use>
+                    </svg>
+                    <input type="text" class="input-field" placeholder="Email" required>
+                </div>
+                <div class="input-wrapper">
+                    <svg class="icon">
+                        <use xlink:href="#lock"></use>
+                    </svg>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                </div>
+                <div class="input-wrapper">
+                    <svg class="icon">
+                        <use xlink:href="#repeat"></use>
+                    </svg>
+                    <input type="password" class="input-field" placeholder="Repeat Password" required>
+                </div>
                 <button type="submit" class="submit-btn">Sign Up</button>
             </form>
         </div>
@@ -56,7 +117,7 @@
         function register(){
             signInForm.style.left = '-400px';
             signUpForm.style.left = '50px';
-            btnDiv.style.left = '101px';
+            btnDiv.style.left = '110px';
         }
         function login(){
             signInForm.style.left = '50px';
