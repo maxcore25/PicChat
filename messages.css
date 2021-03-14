@@ -268,7 +268,8 @@ label{
     transition: .5s;
 }
 .message:hover{
-    /* transform: scale(1.05); */
+    transform: scale(1.05);
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, .5);
 }
 .friend-message{
     background: linear-gradient(to left top, rgba(232, 253, 255, .1), rgba(232, 253, 255, .2));
