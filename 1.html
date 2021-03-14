@@ -77,6 +77,41 @@
                 </g>
             </g>
         </symbol>
+        <symbol id="back-arrow" viewBox="0 0 512 512">
+            <g>
+                <path style="fill:#4DBBEB;" d="M493.52,211.306c-11.938-11.936-27.807-18.509-44.728-18.509l-233.002-0.003l28.465-28.464
+                    c11.958-11.941,18.542-27.823,18.542-44.722c0-34.849-28.354-63.2-63.218-63.2c-16.874,0-32.741,6.573-44.681,18.512L18.601,211.22
+                    c-8.841,8.806-14.827,19.891-17.315,32.056C0.433,247.441,0,251.722,0,256.001c0,16.929,6.607,32.832,18.584,44.761l136.288,136.287
+                    c11.939,11.958,27.822,18.543,44.723,18.543c34.849,0,63.2-28.353,63.202-63.201c0.002-16.879-6.57-32.752-18.512-44.696
+                    l-28.493-28.493h233.035c16.886,0,32.759-6.574,44.694-18.513C518.16,276.046,518.16,235.949,493.52,211.306z"/>
+                <path style="fill:#2488FF;" d="M18.584,300.76l136.288,136.287c11.939,11.958,27.822,18.543,44.723,18.543
+                    c34.849,0,63.2-28.353,63.202-63.201c0.002-16.879-6.57-32.752-18.512-44.696l-28.493-28.493h233.035
+                    c16.886,0,32.759-6.574,44.694-18.513C505.84,288.368,512,272.184,512,256.001H0C0,272.929,6.607,288.833,18.584,300.76z"/>
+            </g>
+        </symbol>
+        <symbol id="chat-menu" viewBox="0 0 512 512">
+            <g>
+                <path style="fill:#3D6DEB;" d="M60.952,195.048C27.343,195.048,0,222.391,0,256s27.343,60.952,60.952,60.952
+                    s60.952-27.343,60.952-60.952S94.562,195.048,60.952,195.048z"/>
+                <path style="fill:#3D6DEB;" d="M256,195.048c-33.609,0-60.952,27.343-60.952,60.952s27.343,60.952,60.952,60.952
+                    s60.952-27.343,60.952-60.952S289.609,195.048,256,195.048z"/>
+                <path style="fill:#3D6DEB;" d="M451.048,195.048c-33.609,0-60.952,27.343-60.952,60.952s27.343,60.952,60.952,60.952
+                    S512,289.609,512,256S484.657,195.048,451.048,195.048z"/>
+            </g>
+        </symbol>
+        <symbol id="send" viewBox="0 0 512 512">
+            <g>
+                <path style="fill:#84DBFF;" d="M512,256.001c0,20.361-11.68,37.862-30.491,45.662L68.412,473.08
+                    c-17.036,7.068-36.766,4.295-51.312-8.29C2.859,452.46-3.101,433.449,1.559,415.198L38.33,271.002l3.82-15.001L38.33,241
+                    L1.559,96.805c-4.66-18.251,1.3-37.262,15.541-49.592c14.084-12.185,33.727-15.586,51.312-8.29L481.509,210.34
+                    C500.32,218.14,512,235.641,512,256.001z"/>
+                <path style="fill:#54C9EB;" d="M38.331,271.002L1.559,415.198c-4.66,18.251,1.3,37.261,15.541,49.592
+                    c14.546,12.586,34.276,15.359,51.312,8.29l413.097-171.417c18.811-7.8,30.491-25.301,30.491-45.662H42.151L38.331,271.002z"/>
+                <path style="fill:#EFEFEF;" d="M233.349,256.001c0,8.28-6.71,15.001-15.001,15.001H38.331l3.82-15.001L38.331,241h180.017
+                    C226.638,241.001,233.349,247.721,233.349,256.001z"/>
+                <path style="fill:#C5D8DF;" d="M38.331,271.002h180.017c8.29,0,15.001-6.72,15.001-15.001H42.151L38.331,271.002z"/>
+            </g>
+        </symbol>
     </svg>
     <main style="padding: 2rem;">
         <div class="main-block">
@@ -128,21 +163,83 @@
                 </a>
             </div>
             <section class="glass">
-                <div class="chats">
-                    <div class="cards">
-                        <div class="message">
-                            <div class="avatar-and-div-wrapper">
-                                <svg class="link-icon">
-                                    <use xlink:href="#user-photo"></use>
-                                </svg>
-                                <div class="card-info">
-                                    <h2>Danya Martsinovich</h2>
-                                    <p>You: Cool, thanks!</p>
-                                </div>
-                            </div>
-                            <h2 class="time">17:19</h2>
+                <div class="chat-header">
+                    <a href="messages.html" class="back-ref">
+                        <svg class="link-icon back-arrow-svg">
+                            <use xlink:href="#back-arrow"></use>
+                        </svg>
+                    </a>
+                    <div class="chat-title">
+                        <h2>Danya Martsinovich</h2>
+                        <p>online</p>
+                    </div>
+                    <svg class="link-icon chat-menu-svg">
+                        <use xlink:href="#chat-menu"></use>
+                    </svg>
+                </div>
+                <div class="chat-box">
+                    <div class="full-width-message-wrapper friend-full-width-message-wrapper">
+                        <div class="message friend-message">
+                            <p>Maksik, I have some vodka!</p>
+                            <p class="message-time">17:18</p>
                         </div>
                     </div>
+                    <div class="full-width-message-wrapper friend-full-width-message-wrapper">
+                        <div class="message friend-message">
+                            <p>Maksik, I have some vodka!</p>
+                            <p class="message-time">17:18</p>
+                        </div>
+                    </div>
+                    <div class="full-width-message-wrapper friend-full-width-message-wrapper">
+                        <div class="message friend-message">
+                            <p>Maksik, I have some vodka!</p>
+                            <p class="message-time">17:18</p>
+                        </div>
+                    </div>
+                    <div class="full-width-message-wrapper friend-full-width-message-wrapper">
+                        <div class="message friend-message">
+                            <p>Maksik, I have some vodka!</p>
+                            <p class="message-time">17:18</p>
+                        </div>
+                    </div>
+                    <div class="full-width-message-wrapper friend-full-width-message-wrapper">
+                        <div class="message friend-message">
+                            <p>Maksik, I have some vodka!</p>
+                            <p class="message-time">17:18</p>
+                        </div>
+                    </div>
+                    <div class="full-width-message-wrapper friend-full-width-message-wrapper">
+                        <div class="message friend-message">
+                            <p>Maksik, I have some vodka!</p>
+                            <p class="message-time">17:18</p>
+                        </div>
+                    </div>
+                    <div class="full-width-message-wrapper friend-full-width-message-wrapper">
+                        <div class="message friend-message">
+                            <p>Maksik, I have some vodka!</p>
+                            <p class="message-time">17:18</p>
+                        </div>
+                    </div>
+                    <div class="full-width-message-wrapper friend-full-width-message-wrapper">
+                        <div class="message friend-message">
+                            <p>Maksik, I have some vodka!</p>
+                            <p class="message-time">17:18</p>
+                        </div>
+                    </div>
+                    <div class="full-width-message-wrapper my-full-width-message-wrapper">
+                        <div class="message my-message">
+                            <p>Cool, thanks!</p>
+                            <p class="message-time">17:19</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" placeholder="Message">
+                    <button class="send-btn">
+                        <svg class="link-icon send-svg">
+                            <use xlink:href="#send"></use>
+                        </svg>
+                    </button>
                 </div>
             </section>
         </div>
