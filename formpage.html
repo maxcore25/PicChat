@@ -44,9 +44,7 @@
         </symbol>
     </svg>
     <section>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="square" style="--i: 0; width: 100px; height: 100px; top: 400px; right: 530px; z-index: 2;"></div>
+        <div class="square" style="--i: 0; width: 100px; height: 100px; top: 50%; right: 30%; z-index: 2;"></div>
         <div class="square" style="--i: 1; width: 50px; height: 50px; top: 300px; left: 580px;"></div>
         <div class="square" style="--i: 2; width: 100px; height: 100px; top: 150px; left: 400px;"></div>
         <div class="square" style="--i: 3; width: 150px; height: 150px; top: 200px; right: 300px;"></div>
@@ -110,18 +108,22 @@
         </div>
         <p id="confidentiality">2021© PICCHAT. ALL RIGHTS RESERVED</p>
     </footer>
-    <script>
+    <script type="text/javascript">
         var signInForm = document.getElementById("login");
         var signUpForm = document.getElementById("register");
         var btnDiv = document.getElementById("btn");
         function register(){
-            signInForm.style.left = '-400px';
-            signUpForm.style.left = '50px';
+            // signInForm.style.left = '-400px';
+            // signUpForm.style.left = '50px';
+            signInForm.style.left = 'calc(-1 * (300px + (700 - 300) * ((100vw - 320px) / (1600 - 320))))';
+            signUpForm.style.left = 'calc(20px + (60 - 20) * ((100vw - 320px) / (1600 - 320)))';
             btnDiv.style.left = '110px';
         }
         function login(){
-            signInForm.style.left = '50px';
-            signUpForm.style.left = '450px';
+            // signInForm.style.left = '50px';
+            // signUpForm.style.left = '450px';
+            signInForm.style.left = 'calc(20px + (60 - 20) * ((100vw - 320px) / (1600 - 320)))';
+            signUpForm.style.left = 'calc(300px + (700 - 300) * ((100vw - 320px) / (1600 - 320)))';
             btnDiv.style.left = '0';
         }
     </script>
