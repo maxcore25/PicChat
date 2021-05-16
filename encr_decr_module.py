@@ -65,6 +65,8 @@ def im_copy(im_path, res):
     return pixres
 
 
-encrypt('koti.jpg', 'I, was. drunk!@(){}[]></?\|*@#$+=%;')
+encrypt('koti.jpg', '''МАКСИК ЛОХ СОСЕТ ПИСЬКУ КУДЖА
+C# КуСоК КаКаШкИ
+апрапрапрапрапрапрапрпарапрапрапарапра''')
 t = decrypt('img_with_text.png')
 print(t)

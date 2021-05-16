@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign in | Sign up Page</title>
-    <link rel="stylesheet" type="text/css" href="formpage.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/formpage.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -127,7 +127,7 @@
             btnDiv.style.left = '0';
         }
     </script>
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/vanilla-tilt.js') }}"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelector(".form-box"), {
             max: 10,
