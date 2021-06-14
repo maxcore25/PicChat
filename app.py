@@ -1,12 +1,28 @@
-from flask import Flask, render_template, redirect, session
+from flask import Flask, session, render_template, redirect
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
+from dotenv import load_dotenv
+import os
+import random
 
-# from Forms import LoginForm, AddNoteForm, RegistrationForm, ParamForm, MoreButton
-# from Models import UserModel, NoteModel, ParamModel, VacModel
-from DB import DB
+# Loading of configurations file
+dotenv_path = os.path.join(os.path.dirname(__file__), 'app_config.env')
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
+
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'very_very_suka_secret_key_(JOPA_MAKSIKA)'
-# db = DB('/home/danya/PycharmProjects/JobsForEverybody-JFE_website/jfe.db')
+# app.debug = True
+app.config['CSRF_ENABLED'] = os.getenv('CSRF_ENABLED')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///D:/Projects/QuotePage/QuotePage/memes.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = os.getenv('SQLALCHEMY_TRACK_MODIFICATIONS')
+
+db = SQLAlchemy(app)
 
 
 @app.route('/login', methods=['POST', 'GET'])
